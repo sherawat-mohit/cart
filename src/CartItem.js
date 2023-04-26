@@ -9,7 +9,21 @@ class CartItem extends React.Component{
             qty:1,
             img:''
         }
+    }
+    increaseQuantity = () =>{
+        this.setState((prevState)=>{
+            return{
+                qty:prevState.qty+1
+            }
+        });
+    }
 
+    decreaseQuantity=()=>{
+        this.setState((prevState)=>{
+            return{
+                qty:prevState.qty-1
+            }
+        })
     }
     render(){
         const{price,title,qty} = this.state;
@@ -30,8 +44,8 @@ class CartItem extends React.Component{
                     </div>
                     <div className='cart-item-actions'>
                         {/* buttons */}
-                        <img alt="increase" className='action-icons' src="https://www.svgrepo.com/show/512678/plus-circle-1427.svg"/>
-                        <img alt="decrease" className='action-icons' src="https://www.svgrepo.com/show/512494/minus-circle-1426.svg"/>
+                        <img alt="increase" className='action-icons' src="https://www.svgrepo.com/show/512678/plus-circle-1427.svg" onClick={this.increaseQuantity}/>
+                        <img alt="decrease" className='action-icons' src="https://www.svgrepo.com/show/512494/minus-circle-1426.svg" onClick={this.decreaseQuantity}/>
                         <img alt="delete" className='action-icons' src="https://www.svgrepo.com/show/511178/trash-full.svg"/>
                     </div>
                 </div>
