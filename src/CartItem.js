@@ -1,12 +1,12 @@
 import React from 'react'
 
 const CartItem = (props) => {
-    const { title, price, qty } = props.product;
+    const { title, price, qty} = props.product;
     const { product, onIncreaseQuantity, onDecreaseQuantity, onDeleteProduct } = props;
     return (
-        <div className='cart-item'>
+        <div className='cart-item'> 
             <div className='left-block'>
-                <img style={styles.image} />
+                <img style={styles.image} src={product.image}/>
             </div>
             <div className='right-block'>
                 <div style={{ fontSize: 25 }}>
@@ -32,7 +32,7 @@ const CartItem = (props) => {
 const styles = {
     image: {
         height: 110,
-        width: 110,
+        width: "auto",
         borderRadius: 10,
         backgroundColor: "#777"
     }

@@ -10,6 +10,10 @@ body {
   display: inline-flex;
   margin: 20px 10px;
 }
+.cart-item .left-block {
+  width:200px;
+  height: 100px;
+}
 .cart-item .right-block {
   padding: 0 20px;
 }
